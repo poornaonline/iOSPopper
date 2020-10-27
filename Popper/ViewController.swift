@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         popper.data = "Poorna Jay Data"
         popper.modalPresentationStyle = .overCurrentContext
         popper.modalTransitionStyle = .crossDissolve
+        popper.performingFunc = {
+            print("Perform this function")
+        }
         
         self.present(popper, animated: true, completion: nil)
         

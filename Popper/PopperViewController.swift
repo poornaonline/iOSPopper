@@ -10,6 +10,7 @@ import UIKit
 class PopperViewController: UIViewController {
     
     var data: String!
+    var performingFunc: (() -> Void)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,7 @@ class PopperViewController: UIViewController {
     
     @IBAction func awesomeClicked(_ sender: Any) {
         print("\(data)")
+        self.performingFunc()
         dismiss(animated: true, completion: nil)
     }
     
